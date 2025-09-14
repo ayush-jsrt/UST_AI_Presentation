@@ -1,0 +1,42 @@
+Why State Storage Methods Are Needed & Where They Are Used
+==========================================================
+
+Why Are They Needed?
+--------------------
+- RL agents must remember past experiences, actions, and rewards to learn effective policies.
+- Storing state-action values (Q-values) or experiences enables agents to estimate future rewards and make better decisions.
+- Without proper storage, agents cannot generalize, adapt, or improve over time.
+- Storage mechanisms allow agents to learn from both recent and distant experiences, improving sample efficiency and stability.
+
+Where Are They Used?
+--------------------
+- Q-tables: Used in simple, discrete environments (e.g., gridworld, classic control problems).
+- DQN/DDQN: Used in complex, high-dimensional environments (e.g., video games, robotics, continuous control).
+- Neural Networks: Used in deep RL, policy gradient methods, and environments with raw sensory input (images, audio).
+- Replay Buffers: Used in off-policy algorithms (DQN, DDQN, SAC) to improve sample efficiency and stability.
+- Hybrid/Custom Methods: Used in advanced RL research, multi-agent systems, and specialized tasks.
+
+
+Real-World Examples:
+--------------------
+- Chess Engines:
+	- Stockfish: Uses advanced search algorithms and evaluation functions, storing millions of positions and transitions in hash tables and transposition tables.
+	- AlphaZero: Utilizes deep neural networks and Monte Carlo Tree Search (MCTS) to learn chess, shogi, and Go from scratch, storing state-action values and policies in neural networks.
+- Video Game AI:
+	- DeepMind's DQN: Learned to play Atari games directly from pixels using deep Q-networks and replay buffers.
+	- OpenAI Five: Used LSTM networks and massive experience replay to master Dota 2, storing complex state and action histories.
+- Robotics:
+	- Boston Dynamics robots: Use RL and neural networks to learn locomotion, balance, and manipulation, storing sensor data and learned policies.
+- Autonomous Vehicles:
+	- Waymo, Tesla: Use RL and deep learning to optimize driving policies, storing state transitions, sensor data, and action outcomes for safe navigation.
+- Industrial Automation:
+	- RL agents optimize energy usage, production schedules, and maintenance, storing operational states and learned strategies.
+
+More Examples:
+- Recommendation Systems: Netflix, YouTube, and Amazon use RL to personalize content, storing user states, actions, and feedback.
+- Finance: RL agents trade stocks, manage portfolios, and hedge risks, storing market states and transaction histories.
+- Healthcare: RL optimizes treatment plans, drug dosing, and resource allocation, storing patient states and outcomes.
+
+Summary:
+--------
+State storage is fundamental for RL agents to learn, adapt, and perform well in diverse environments. The choice of method impacts scalability, learning speed, and overall agent intelligence. Real-world RL systems leverage creative storage and learning mechanisms to achieve superhuman performance and solve complex problems.

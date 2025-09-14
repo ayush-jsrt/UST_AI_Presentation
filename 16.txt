@@ -1,0 +1,26 @@
+Advanced Uses of RL State Storage: RLHF & Language Models
+=========================================================
+
+Reinforcement Learning from Human Feedback (RLHF):
+--------------------------------------------------
+- RLHF is a technique where RL agents learn from human-provided feedback, rather than just numerical rewards.
+- Used to align AI systems with human values, preferences, and safety requirements.
+- State storage (e.g., replay buffers, neural networks) is essential for tracking feedback, updating policies, and improving agent behavior.
+- Example: Training large language models (LLMs) like GPT-3 and GPT-4 to produce helpful, safe, and less explicit outputs by learning from human ratings and corrections.
+
+Language Models & RL:
+---------------------
+- RL is used to fine-tune LLMs (e.g., GPT-2, GPT-3, GPT-4) for specific tasks, such as reducing explicitness, improving helpfulness, or following instructions.
+- State storage methods help models remember past interactions, feedback, and context, enabling better adaptation and control.
+- RLHF and related techniques are critical for making AI systems more robust, ethical, and user-friendly.
+
+Other Advanced Tasks:
+---------------------
+- Dialogue systems: RL agents learn to hold natural, engaging conversations by storing dialogue history and feedback.
+- Content moderation: RL can be used to train models to detect and avoid harmful or explicit content, using stored examples and feedback.
+- Personalization: RL agents adapt to individual users by storing preferences, actions, and feedback over time.
+- Safety and alignment: RL and state storage are key for building AI systems that behave safely and align with human intentions.
+
+Summary:
+--------
+State storage in RL is not just for games and robotics—it powers advanced AI alignment, safety, and personalization in modern language models and interactive systems.

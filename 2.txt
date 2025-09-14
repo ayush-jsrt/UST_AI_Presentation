@@ -1,0 +1,17 @@
+Document Corpus (No Embedding Model)
+====================================
+
+
+Flow:
+
+                        ┌───────────────┐
+                        │  User Prompt  │
+                        └───────────────┘
+                                |
+                                v
+┌────────────────┐   ┌─────────────────────────────┐   ┌─────────────┐
+│Document Corpus │-->| Large Language Model (LLM)  |-->|  Response   │
+└────────────────┘   └─────────────────────────────┘   └─────────────┘
+
+Description:
+In this basic setup, the prompt is provided to the LLM, which also has access to the document corpus. The LLM generates a response using the raw documents, but without embeddings or semantic search, the retrieval is basic and often less relevant. The response is formed from both the prompt and the available documents, but lacks advanced context matching.

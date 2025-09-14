@@ -1,0 +1,17 @@
+Reranker Models: Flow & Description
+===================================
+
+Flow:
+
+                        ┌───────────────┐
+                        │  User Prompt  │
+                        └───────────────┘
+                                |
+                                v
+┌────────────────┐   ┌───────────────┐   ┌───────────────┐   ┌───────────────┐   ┌─────────────────────────────┐   ┌─────────────┐
+│Document Corpus │-->| Embedding     |-->| VectorDB      |-->|   Reranker    |-->| Large Language Model (LLM)  |-->|  Response   │
+└────────────────┘   │   Model      │   └───────────────┘   └───────────────┘   └─────────────────────────────┘   └─────────────┘
+                    └───────────────┘
+
+Description:
+A reranker model takes the initial set of retrieved documents (from the VectorDB) and reorders them based on relevance to the user prompt. This ensures that the most contextually appropriate documents are passed to the LLM, resulting in more accurate and useful responses. Rerankers are especially valuable when dealing with large corpora or ambiguous queries.

@@ -1,0 +1,13 @@
+Voyage AI
+=========
+
+Voyage AI is an advanced artificial intelligence platform specializing in natural language processing (NLP), semantic search, and data analytics. It provides powerful embedding models that convert text and data into high-dimensional vectors, enabling efficient search and retrieval. Voyage AI also offers reranker models, which improve the relevance of search results by reordering them based on context and user intent.
+
+Key Features:
+- Embedding models for text and data
+- Reranker models for improved search relevance
+- Customizable NLP solutions for enterprises
+
+MongoDB Partnership:
+--------------------
+In 2025, Voyage AI signed a $220 million deal with MongoDB. This partnership aims to integrate Voyage AI's advanced search and embedding technologies into MongoDB's database platform, enhancing its AI-powered data discovery and analytics capabilities for global customers.

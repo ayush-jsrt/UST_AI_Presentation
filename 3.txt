@@ -1,0 +1,17 @@
+Document Corpus with Embedding Model & VectorDB
+===============================================
+
+Flow:
+
+				┌───────────────┐
+				│  User Prompt  │----------------------------------------------┐
+				└───────────────┘                                              |
+					  |                                                        |
+					  v                                                        v
+┌────────────────┐   ┌───────────────┐   ┌───────────────┐   ┌─────────────────────────────┐   ┌─────────────┐
+│Document Corpus │-->|   Embedding   |-->| VectorDB      |-->| Large Language Model (LLM)  |-->|  Response   │
+└────────────────┘   │     Model     │   └───────────────┘   └─────────────────────────────┘   └─────────────┘
+		        	 └───────────────┘
+
+Description:
+In this advanced setup, the document corpus is first processed by an embedding model, converting documents into vector representations. These vectors are stored in a vector database (VectorDB), enabling efficient semantic search and retrieval. The user prompt is used to query the VectorDB, retrieving the most relevant documents, which are then provided to the LLM. The LLM generates a response using these contextually matched documents, resulting in more accurate and relevant answers.

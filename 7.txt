@@ -1,0 +1,15 @@
+FHIR & AWS HealthLake
+=====================
+
+FHIR (Fast Healthcare Interoperability Resources) is a global standard for exchanging healthcare information electronically. It defines how healthcare data is formatted, shared, and accessed, making it easier for systems to interoperate and for organizations to collaborate securely.
+
+How HealthLake Uses FHIR:
+- HealthLake ingests healthcare data from various sources (EHRs, labs, devices)
+- Data is normalized and stored in FHIR format, ensuring consistency and interoperability
+- FHIR resources (Patient, Observation, Condition, etc.) allow for structured queries and analytics
+- Enables seamless integration with other FHIR-compliant systems and applications
+
+Benefits:
+- Simplifies data exchange between providers, payers, and patients
+- Supports advanced analytics and machine learning on standardized data
+- Reduces integration complexity and improves data quality

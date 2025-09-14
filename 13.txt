@@ -1,0 +1,52 @@
+Epsilon & Epsilon Decay in Reinforcement Learning
+=================================================
+
+Definition:
+Epsilon (ε) is a parameter used in reinforcement learning, especially in epsilon-greedy policies, to balance exploration and exploitation. It determines the probability with which an agent chooses a random action (exploration) instead of the best-known action (exploitation).
+
+How Epsilon Works:
+- At each decision step, with probability ε, the agent selects a random action.
+- With probability 1-ε, the agent selects the action that maximizes its expected reward (greedy action).
+- This randomness helps the agent discover new strategies and avoid getting stuck in suboptimal behavior.
+
+Epsilon Decay:
+- Epsilon decay is the process of gradually reducing ε over time.
+- Early in training, ε is high (more exploration), allowing the agent to learn about the environment.
+- As training progresses, ε is reduced (less exploration, more exploitation), so the agent leverages its learned knowledge.
+- Common decay strategies: linear decay, exponential decay, step decay.
+
+Why Epsilon & Decay Matter:
+- Ensures the agent explores enough to find optimal policies.
+- Prevents premature convergence to suboptimal solutions.
+- Balances learning new information and exploiting known good actions.
+
+Typical Usage:
+- Initial ε: 1.0 (fully random)
+- Final ε: 0.01 or 0.05 (mostly greedy)
+- Decay rate: chosen based on environment and training duration
+
+Visualization:
+
+Epsilon-Greedy Action Selection:
+
+    ┌─────────────┐
+    │  Agent      │
+    └─────┬───────┘
+          |
+          v
+    ┌─────────────┐
+    │  Random?    │<-- ε
+    └─────┬───────┘
+      Yes | No
+      v     v
+┌────────┐ ┌─────────────┐
+│Random  │ │Best Action  │
+│Action  │ │(Greedy)     │
+└────────┘ └─────────────┘
+
+As ε decays, the agent shifts from random actions to greedy actions, improving performance and stability.
+
+Further Notes:
+- Epsilon is crucial in Q-learning, Deep Q-Networks (DQN), and other RL algorithms.
+- Alternative exploration strategies include Boltzmann exploration, entropy regularization, and Thompson sampling.
+- Proper tuning of ε and its decay schedule is essential for successful RL training.

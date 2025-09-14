@@ -1,0 +1,45 @@
+Episode in Reinforcement Learning
+=================================
+
+Definition:
+An episode in reinforcement learning is a sequence of interactions between an agent and its environment, starting from an initial state and ending when a terminal condition is reached (e.g., goal achieved, time limit, failure). Each episode consists of multiple steps where the agent observes, acts, and receives feedback.
+
+
+
+ASCII Diagram:
+
+┌─────────────────────────────────────────────────────────────┐
+│                      Environment                           │
+│                                                            │
+│   ┌─────────────────────────────────────────────────────┐   │
+│   │                      Agent                          │   │
+│   │ ┌─────────────┐   ┌─────────────┐   ┌─────────────┐ │   │
+│   │ │   Sensor    │-->|   State     |<--│  Actuator   │ │   │
+│   │ └─────────────┘   └─────────────┘   └─────────────┘ │   │
+│   │        |                |                |          │   │
+│   │        v                v                v          │   │
+│   │   (Observes)      (Updates)         (Acts)          │   │
+│   └─────────────────────────────────────────────────────┘   │
+│            |                                         │     │
+│            v                                         │     │
+│      ┌─────────────┐                                 │     │
+│      │ Simulator   │<---------------------------------┘     │
+│      └─────────────┘                                       │
+│            |                                               │
+│            v                                               │
+│   (Models environment dynamics, updates observations)      │
+└─────────────────────────────────────────────────────────────┘
+
+Flow:
+1. Sensor observes environment and updates agent's state
+2. Agent decides actions using actuator based on state
+3. Actuator sends actions to simulator
+4. Simulator models environment changes and provides new observations
+5. Cycle repeats until episode ends
+
+Flow:
+1. Agent observes environment via sensors
+2. Agent maintains internal state
+3. Agent acts on environment using actuators
+4. Simulator models environment dynamics
+5. The cycle repeats until the episode ends

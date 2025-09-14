@@ -1,0 +1,24 @@
+Reranker Models
+===============
+
+Rerankers are specialized AI models designed to improve the relevance and quality of search results. When a user submits a prompt, an initial set of candidate documents is retrieved—often using embeddings and a vector database. These documents may be arranged in a random or arbitrary order, not necessarily reflecting their usefulness to the query.
+
+The reranker model takes these candidates and evaluates each one, assigning a relevance score based on how well the document matches the user's prompt. After scoring, the documents are sorted (ranked) so that the most contextually appropriate and useful information appears first. This process is crucial for surfacing the best answers, especially when dealing with large datasets or ambiguous queries.
+
+Flow:
+
+┌────────────────────┐   ┌───────────────┐
+│Randomly Arranged   │-->|  Reranker     |
+│Documents           │   │   Model       |
+└────────────────────┘   └───────────────┘
+	  |                      |
+	  v                      v
+  [Scoring Step]         [Prompt Provided]
+	  |                      |
+	  v                      v
+┌───────────────────────────────┐
+│Documents Ranked by Relevance │
+└───────────────────────────────┘
+
+Description:
+Initially, documents are retrieved and may be in a random order. The reranker model, using the user's prompt, scores each document for relevance. Documents are then sorted so that the highest-scoring (most relevant) ones are prioritized for the final response.

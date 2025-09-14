@@ -1,0 +1,52 @@
+Storing State & Knowledge in RL Agents
+======================================
+
+Overview:
+In reinforcement learning, agents need to store and update knowledge about the environment, actions, and rewards. This is crucial for learning optimal policies and making informed decisions. There are several methods and data structures used for this purpose, each with its own strengths and applications.
+
+Common Storage Methods:
+
+1. Transition Table (Q-Table):
+   - Tabular storage of state-action pairs and their Q-values.
+   - Used in classic Q-learning for discrete, small state spaces.
+   - Easy to implement, but not scalable for large or continuous spaces.
+
+2. Deep Q-Network (DQN):
+   - Uses a neural network to approximate Q-values for state-action pairs.
+   - Enables RL in high-dimensional or continuous environments.
+   - Learns complex patterns and generalizes across similar states.
+
+3. Double DQN (DDQN):
+   - Variant of DQN that reduces overestimation bias by using two networks.
+   - Improves stability and accuracy of Q-value estimates.
+
+4. Neural Networks (NN):
+   - General function approximators for value functions, policies, or models.
+   - Used in actor-critic, policy gradient, and model-based RL algorithms.
+   - Can represent complex relationships and handle raw sensory input.
+
+5. Replay Buffer:
+   - Stores past experiences (state, action, reward, next state) for training.
+   - Enables experience replay, improving sample efficiency and stability.
+
+6. Other Methods:
+   - Hash tables, decision trees, memory-augmented networks, graph structures.
+   - Used for specialized tasks or hybrid approaches.
+
+ASCII Visualization:
+
+┌───────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
+│ Q-Table       │   │   DQN       │   │  DDQN       │   │  NN/Replay  │
+│ (Tabular)     │   │ (Deep NN)   │   │ (Double NN) │   │  Buffer     │
+└─────┬─────────┘   └─────┬───────┘   └─────┬───────┘   └─────┬───────┘
+      |                   |                   |                |
+      v                   v                   v                v
+  [State/Action]     [State/Action]      [State/Action]   [Experience]
+      |                   |                   |                |
+      v                   v                   v                v
+  [Q-Value]          [Q-Value]           [Q-Value]        [Training]
+
+Notes:
+- Choice of storage method depends on environment complexity, agent architecture, and computational resources.
+- Modern RL often combines several methods for best results.
+- Creativity in designing storage and learning mechanisms can lead to breakthroughs in agent performance!

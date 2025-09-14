@@ -1,0 +1,19 @@
+HealthLake & SageMaker: Predictive Analytics
+============================================
+
+Use Case:
+Using AWS HealthLake with Amazon SageMaker, healthcare organizations can build predictive models for patient outcomes, such as risk of readmission, disease progression, or treatment effectiveness. HealthLake provides normalized, FHIR-compliant data, which is ideal for training machine learning models in SageMaker.
+
+
+Flow (Real-Time Prediction):
+
+┌───────────────┐   ┌─────────────┐   ┌─────────────┐   ┌───────────────┐   ┌─────────────┐
+│ HealthLake    │-->| API Gateway |-->|   Lambda    |-->| SageMaker     |-->| Prediction  │
+│   (FHIR)      │   └─────────────┘   └─────────────┘   └───────────────┘   └─────────────┘
+└───────────────┘
+
+Description:
+HealthLake stores and normalizes healthcare data. API Gateway exposes endpoints for applications to request predictions. Lambda functions process incoming requests, trigger SageMaker for real-time inference, and return predictions to the client. This architecture enables secure, scalable, and automated clinical decision support.
+
+Description:
+HealthLake supplies clean, standardized healthcare data. This data is preprocessed and used to train machine learning models in SageMaker. Once trained, models are deployed to generate predictions and actionable clinical insights for healthcare providers.
